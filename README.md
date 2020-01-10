@@ -1,2 +1,2 @@
-# PortfolioBrian
-My personal portfolio
+# Portfolio Brian
+Portfolio to show some images
