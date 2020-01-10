@@ -1,0 +1,68 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Le cambiamos el background al body el cual es un blanco no tan claro,
+para que no dañe la vista, aparte de que utilizara la fuente de google fonts en todos las letras de las paginas*/
+body {
+    background: #f3f3f3;
+    font-family: 'Gayathri', sans-serif;
+}
+/* A los enlances les quitamos el subrayado con el cual viene por defecto, de igual forma le quitamos todo (color y subrayado)*/
+a {
+    text-decoration: none;
+}
+
+/* clase contenedor para que las fotos y todo este centrado, aqui mismo se modifica el ancho del mismo para permitir que nada mas hayan filas de 2 o 3, o de las que quiera uno*/
+.contenedor {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+/***********************
+
+HEADER
+
+***********************/
+
+header {
+    padding: 40px 0;
+}
+
+/* Hacemos que todo el texto este centrado y que haya un margen
+en la parte inferior de 40 px*/
+header .logo{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* accedemos a la etiqueta parrafo para cambiarle el color
+al texto*/
+header .logo p {
+    color: #9b9b9b;
+}
+
+/* Clase para centrar la barra de busqueda*/
+header form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Clase para editar la barra de busqueda*/
+header .barra-buscar {
+    width: 70%;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    padding: 0 20px;
+    border-radius: 100px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+}
