@@ -23,11 +23,9 @@ a {
 }
 
 
-/***********************
-
-HEADER
-
-***********************/
+/*****************************
+        Header - Logo
+******************************/
 
 header {
     padding: 40px 0;
@@ -46,6 +44,9 @@ header .logo p {
     color: #9b9b9b;
 }
 
+/*****************************
+        Header - Buscador
+******************************/
 /* Clase para centrar la barra de busqueda*/
 header form {
     width: 100%;
@@ -65,4 +66,81 @@ header .barra-buscar {
     border: none;
     text-align: center;
     font-size: 16px;
+}
+
+/*****************************
+        Header - Categorias
+******************************/
+header .categorias{
+    /* le indicamos que queremos tarbajar con flexbox
+    el cual nos permite centrar elementos y que tengan espaciado*/
+    display: flex;
+    /* Queremos que este centrado todo*/
+    justify-content: center;
+    /* Si los elementos no caben, se pondran abajo*/
+    flex-wrap: wrap;
+}
+
+header .categorias a{
+    color: #9b9b9b;
+    margin: 10px 20px;
+    font-size: 18px;
+    /* Para poner negritas las letras*/
+    font-weight: 700;
+}
+
+header .categorias a.activo{
+    color: #000;
+
+    
+}
+
+/*****************************
+        Seccion - Grid
+******************************/
+
+.grid.imagenes-cargadas{
+    opacity: 1;
+}
+
+.grid {
+    position: relative;
+    width: 100%;
+    /*Se pone la opacidad a 0 para que no se muestren las imagenes
+    todo esto para poder mostar todas las imagenes al mismo tiempo y que 
+    no se muestren mientras vayan cargando, efectos para UX*/
+    /* Esto se cambiara con javascript*/
+    opacity: 0;
+    /*Aqui hacemos una transicion que afecta nada mas a la opacidad
+    que dure 0.5 segundos, sea linea y tengan un delay de 1 segundo*/
+    transition: opacity 0.5s linear 1s;
+    /* */
+}
+
+/* Aqui establecemos que los items (O sea cada contenedor)
+tendra un espacio del 33.33%, asi todos tedran el mismo espacio */
+.grid .item{
+    position: absolute;
+    display: block;
+    padding: 0;
+    margin: 10px;
+    /* Algo importanten es que se tiene que calcular el margen
+    para que todo quede bien
+    Se calcula y se le resta 20 px dado que de momento tiene
+    10 pixeles en lado izquiero y derecho, asi dadon 20 px
+    */
+    width: calc(33.33% - 20px);
+    
+}
+
+.grid .item_contenido{
+    position: relative;
+}
+
+/* Aqui hacemos que la imagen se ajuste al contenedor, que es lo de arriba*/
+.grid .item img{
+    width: 100%;
+    /* Esto nos permite que cambie el cursor cuando este encima de la imagen*/
+    cursor: pointer;
+    vertical-align: top;
 }
